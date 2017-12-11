@@ -1,0 +1,42 @@
+<html lang="ja">
+ <head>
+  <meta charset="UTF-8">
+  <title>"お疲れ様でした"</title>
+ </head>
+ <body bgcolor="white">
+   <script>  //画像の切り替え
+   var img=new Array();
+
+   img[0]=new Image();
+   img[0].src="dog.jpeg";
+   img[1]=new Image();
+   img[1].src="dog1.jpeg";
+   img[2]=new Image();
+   img[2].src="dog2.jpeg";
+   img[3]=new Image();
+   img[3].src="img.jpg";
+
+   var num=0;
+   function changeIMG(){
+     if (num==3)
+     { num=0; }
+     else
+     { num++; }
+     document.getElementById("picture").src=img[num].src;
+   }
+   </script>
+    <div align="center">
+      <font color="gray" face="Herculanum regular">
+       <h1>お疲れ様でした</h1>
+      </font>
+    </div>
+    <center>
+     <img id="picture" onclick="changeIMG()" src="dog.jpeg" width="600" heifht="600">
+    </center>
+    <div align="center">
+      <font size="5">
+       <a href="todo.html">戻る</a>
+      </font>
+    </div>
+ </body>
+</html>
